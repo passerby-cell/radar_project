@@ -1,7 +1,11 @@
-package generate;
+package com.radar.dao;
 
-import generate.SavePathInfo;
+import com.radar.pojo.SavePathInfo;
+import org.apache.ibatis.annotations.Mapper;
 
+
+import java.util.List;
+@Mapper
 public interface SavePathInfoDao {
     int deleteByPrimaryKey(Integer algId);
 
@@ -14,4 +18,6 @@ public interface SavePathInfoDao {
     int updateByPrimaryKeySelective(SavePathInfo record);
 
     int updateByPrimaryKey(SavePathInfo record);
+
+    List<SavePathInfo> selectAll();
 }

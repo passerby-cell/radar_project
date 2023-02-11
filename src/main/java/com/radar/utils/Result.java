@@ -1,4 +1,4 @@
-package com.example.utils;
+package com.radar.utils;
 
 /**
  * 用于微服务返回结果给前端
@@ -28,7 +28,7 @@ public class Result<T> {
 
     public Result() {
         this.flag = true;
-        this.code = StatusCode.OK;
+        this.code = com.radar.utils.StatusCode.OK;
         this.message = "操作成功!";
     }
 

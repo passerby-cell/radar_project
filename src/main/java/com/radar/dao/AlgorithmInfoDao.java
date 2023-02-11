@@ -1,7 +1,12 @@
-package generate;
+package com.radar.dao;
 
-import generate.AlgorithmInfo;
+import com.radar.pojo.AlgorithmInfo;
+import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
+
+@Mapper
 public interface AlgorithmInfoDao {
     int deleteByPrimaryKey(String paramName);
 
@@ -14,4 +19,7 @@ public interface AlgorithmInfoDao {
     int updateByPrimaryKeySelective(AlgorithmInfo record);
 
     int updateByPrimaryKey(AlgorithmInfo record);
+
+    List<AlgorithmInfo> selectAll();
+
 }

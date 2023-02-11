@@ -1,4 +1,4 @@
-package com.example.utils;
+package com.radar.utils;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;

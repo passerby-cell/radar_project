@@ -1,4 +1,4 @@
-package generate;
+package com.radar.pojo;
 
 import java.io.Serializable;
 import lombok.Data;

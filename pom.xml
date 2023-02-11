@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>SpringBoot-template</artifactId>
+    <groupId>org.radar</groupId>
+    <artifactId>radar_project</artifactId>
     <version>1.0-SNAPSHOT</version>
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -44,12 +44,6 @@
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/javax.persistence/persistence-api -->
-    <dependency>
-        <groupId>javax.persistence</groupId>
-        <artifactId>persistence-api</artifactId>
-        <version>1.0</version>
-    </dependency>
     <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
     <dependency>
         <groupId>org.slf4j</groupId>
@@ -73,30 +67,47 @@
             <artifactId>jjwt</artifactId>
             <version>0.9.0</version>
         </dependency>
+        <dependency>
+            <groupId>matlab</groupId>
+            <artifactId>matlab.javabuilder</artifactId>
+            <version>2020a</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/lib/javabuilder.jar</systemPath>
+        </dependency>
+
+
+        <dependency>
+            <groupId>matlab</groupId>
+            <artifactId>matlab.MatlabFunction</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/lib/MatlabFunction.jar</systemPath>
+        </dependency>
+
     </dependencies>
-    <build>
-    <plugins>
-        <plugin>
-            <groupId>org.mybatis.generator</groupId>
-            <artifactId>mybatis-generator-maven-plugin</artifactId>
-            <version>1.4.0</version>
-            <executions>
-                <execution>
-                    <id>Generate MyBatis Artifacts</id>
-                    <goals>
-                        <goal>generate</goal>
-                    </goals>
-                </execution>
-            </executions>
-            <configuration>
-                <!-- 输出详细信息 -->
-                <verbose>true</verbose>
-                <!-- 覆盖生成文件 -->
-                <overwrite>true</overwrite>
-                <!-- 定义配置文件 -->
-                <configurationFile>${basedir}/src/main/resources/generator-configuration.xml</configurationFile>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
+<!--    <build>-->
+<!--    <plugins>-->
+<!--        <plugin>-->
+<!--            <groupId>org.mybatis.generator</groupId>-->
+<!--            <artifactId>mybatis-generator-maven-plugin</artifactId>-->
+<!--            <version>1.4.0</version>-->
+<!--            <executions>-->
+<!--                <execution>-->
+<!--                    <id>Generate MyBatis Artifacts</id>-->
+<!--                    <goals>-->
+<!--                        <goal>generate</goal>-->
+<!--                    </goals>-->
+<!--                </execution>-->
+<!--            </executions>-->
+<!--            <configuration>-->
+<!--                &lt;!&ndash; 输出详细信息 &ndash;&gt;-->
+<!--                <verbose>true</verbose>-->
+<!--                &lt;!&ndash; 覆盖生成文件 &ndash;&gt;-->
+<!--                <overwrite>true</overwrite>-->
+<!--                &lt;!&ndash; 定义配置文件 &ndash;&gt;-->
+<!--                <configurationFile>${basedir}/src/main/resources/generator-configuration.xml</configurationFile>-->
+<!--            </configuration>-->
+<!--        </plugin>-->
+<!--    </plugins>-->
+<!--</build>-->
 </project>

@@ -4,7 +4,7 @@ spring:
   datasource:
     name: cloudplatform
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cloudplatform?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/xidian_radar?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false&serverTimezone=UTC
     username: root
     password: 123456
     hikari:
@@ -16,3 +16,12 @@ spring:
       max-lifetime: 30000
       connection-timeout: 30000
       connection-test-query: SELECT 1
+mybatis:
+  mapper-locations: mapper/*.xml
+output:
+  data:
+    origdata: D:\output\data\origdata\EchoDataCycle
+    detectiondata: D:\output\data\detectiondata\Loop
+
+filemanager:
+  file: D:\output\

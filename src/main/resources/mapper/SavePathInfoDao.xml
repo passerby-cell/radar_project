@@ -15,7 +15,7 @@
     from save_path_info
     where alg_id = #{algId,jdbcType=INTEGER}
   </select>
-  <select id="selectAll" resultType="com.radar.pojo.SavePathInfo">
+  <select id="selectAll" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from save_path_info

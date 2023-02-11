@@ -1,4 +1,4 @@
-package com.example.utils;
+package com.radar.utils;
 
 import java.io.Serializable;
 import java.util.List;
