@@ -10,7 +10,7 @@
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>
         <groupId>org.springframework.boot</groupId>
-        <version>2.3.0.RELEASE</version>
+        <version>2.1.2.RELEASE</version>
     </parent>
 
     <properties>
@@ -18,38 +18,38 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
     <dependencies>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-jdbc</artifactId>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-test</artifactId>
-    </dependency>
-    <dependency>
-        <groupId>org.mybatis.spring.boot</groupId>
-        <artifactId>mybatis-spring-boot-starter</artifactId>
-        <version>2.2.2</version>
-    </dependency>
-    <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-        <version>8.0.13</version>
-    </dependency>
-    <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-    </dependency>
-    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-    <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-api</artifactId>
-        <version>1.7.25</version>
-    </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
         <!--fastjson-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -67,47 +67,65 @@
             <artifactId>jjwt</artifactId>
             <version>0.9.0</version>
         </dependency>
+        <!--        在Maven安装Jar包后在pom文件中引入-->
         <dependency>
             <groupId>matlab</groupId>
-            <artifactId>matlab.javabuilder</artifactId>
+            <artifactId>MatlabFunction</artifactId>
+            <version>3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>matlab</groupId>
+            <artifactId>javabuilder</artifactId>
             <version>2020a</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/src/main/resources/lib/javabuilder.jar</systemPath>
         </dependency>
-
-
         <dependency>
             <groupId>matlab</groupId>
-            <artifactId>matlab.MatlabFunction</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/src/main/resources/lib/MatlabFunction.jar</systemPath>
+            <artifactId>secondmatlabfunction</artifactId>
+            <version>6.0</version>
         </dependency>
+        <dependency>
+            <groupId>matlab</groupId>
+            <artifactId>thirdmatlabfunction</artifactId>
+            <version>3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.12</version>
+        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>com.mathworks.toolbox</groupId>-->
+        <!--            <artifactId>javabuilder</artifactId>-->
+        <!--            <version>2020a</version>-->
+        <!--            <scope>system</scope>-->
+        <!--            <systemPath>${basedir}/src/main/resources/lib/javabuilder.jar</systemPath>-->
+        <!--        </dependency>-->
+
+
+        <!--        <dependency>-->
+        <!--            <groupId>matlab</groupId>-->
+        <!--            <artifactId>MatlabFunction</artifactId>-->
+        <!--            <version>1.0</version>-->
+        <!--            <scope>system</scope>-->
+        <!--            <systemPath>${basedir}/src/main/resources/lib/MatlabFunction.jar</systemPath>-->
+        <!--        </dependency>-->
 
     </dependencies>
-<!--    <build>-->
-<!--    <plugins>-->
-<!--        <plugin>-->
-<!--            <groupId>org.mybatis.generator</groupId>-->
-<!--            <artifactId>mybatis-generator-maven-plugin</artifactId>-->
-<!--            <version>1.4.0</version>-->
-<!--            <executions>-->
-<!--                <execution>-->
-<!--                    <id>Generate MyBatis Artifacts</id>-->
-<!--                    <goals>-->
-<!--                        <goal>generate</goal>-->
-<!--                    </goals>-->
-<!--                </execution>-->
-<!--            </executions>-->
-<!--            <configuration>-->
-<!--                &lt;!&ndash; 输出详细信息 &ndash;&gt;-->
-<!--                <verbose>true</verbose>-->
-<!--                &lt;!&ndash; 覆盖生成文件 &ndash;&gt;-->
-<!--                <overwrite>true</overwrite>-->
-<!--                &lt;!&ndash; 定义配置文件 &ndash;&gt;-->
-<!--                <configurationFile>${basedir}/src/main/resources/generator-configuration.xml</configurationFile>-->
-<!--            </configuration>-->
-<!--        </plugin>-->
-<!--    </plugins>-->
-<!--</build>-->
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
