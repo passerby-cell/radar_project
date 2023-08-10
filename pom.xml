@@ -86,7 +86,7 @@
         <dependency>
             <groupId>matlab</groupId>
             <artifactId>thirdmatlabfunction</artifactId>
-            <version>3.0</version>
+            <version>6.0</version>
         </dependency>
         <dependency>
             <groupId>cn.hutool</groupId>

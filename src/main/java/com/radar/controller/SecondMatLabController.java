@@ -1,8 +1,8 @@
 package com.radar.controller;
 
-import ThirdPartMatlab.DrawDIXiaoMan;
+
+import DrawDIXiaoMan.DrawDIXiaoMan;
 import cn.hutool.core.io.FileUtil;
-import com.mathworks.toolbox.javabuilder.MWException;
 import com.radar.utils.Result;
 import com.radar.utils.StatusCode;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,7 +19,8 @@ public class SecondMatLabController {
     @GetMapping("/dixiaomansix")
     public Result dixiaomansix(@RequestParam("p") Integer p) {
         deleteFile(outputDir + "8.jpg");
-        try {    DrawDIXiaoMan drawDIXiaoMan = new DrawDIXiaoMan();
+        try {
+            DrawDIXiaoMan drawDIXiaoMan = new DrawDIXiaoMan();
             drawDIXiaoMan.part6(outputDir, p);
             return new Result<>(true, StatusCode.OK, "成功");
         } catch (Exception e) {

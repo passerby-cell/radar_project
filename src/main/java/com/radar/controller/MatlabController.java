@@ -1,7 +1,6 @@
 package com.radar.controller;
 
 import MatlabFunction.MatlabUtils;
-import ThirdPartMatlab.DrawDIXiaoMan;
 import cn.hutool.core.io.FileUtil;
 import com.mathworks.toolbox.javabuilder.MWException;
 import com.radar.utils.Result;
